@@ -1,0 +1,164 @@
+:root {
+  --principalFont: "Roboto", sans-serif;
+  --secondaryFont: "Lato", sans-serif;
+
+  --primaryColor: #1073ba;
+  --secondaryColor: #00da55;
+  --gray: #3b3b3b;
+  --lightGray: #e1e1e1;
+  --black: #1f1e1e;
+  --white: #fff;
+  --space: 5rem;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  font-family: var(--principalFont);
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/*GLOBALES*/
+.container {
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 900;
+  font-family: var(--secondaryFont);
+  margin: calc(var(--space) / 2) 0;
+}
+h1 {
+  font-size: 4.4rem;
+}
+h2 {
+  font-size: 3.6rem;
+}
+h3 {
+  font-size: 2.8rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/*UTILIDADES*/
+
+.text-center {
+  text-align: center;
+}
+
+/* DEGRADADOS*/
+
+.degradado-verde {
+  color: transparent;
+  background: linear-gradient(
+    to right,
+    var(--primaryColor) 0%,
+    var(--secondaryColor) 85%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/*HEADER*/
+.header {
+  background-color: var(--black);
+  padding: calc(3 * var(--space)) 0;
+  color: var(--white);
+}
+
+@media (min-width: 768px) {
+  .header-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.header-text {
+  padding-top: var(--space);
+}
+
+@media (min-width: 768px) {
+  .header-text {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+  }
+}
+.header-text p {
+  margin: 0;
+}
+.product-tagline {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.product-name {
+  font-size: 5rem;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .product-name {
+    font-size: 8rem;
+
+    line-height: 1;
+  }
+}
+
+.product-price span {
+  font-size: 6rem;
+  font-weight: 900;
+}
+
+/*INFO*/
+
+.info-grid {
+  margin-top: var(--space);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  row-gap: var(--space);
+}
+@media (min-width:768px){
+  .info-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 5rem;
+  }
+}
+.info-grid .info-text h2 {
+  color: var(--primaryColor);
+  font-size: 2.8rem;
+}
+.info-grid .info-icon img {
+  width: 7rem;
+  margin: 0 auto;
+}
+.info-grid .info-text p {
+  text-align: justify;
+}
+.info-area{
+  margin-bottom: var(--space);
+  
+}
+@media (min-width:768px){
+  .info-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
