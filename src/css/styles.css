@@ -186,6 +186,11 @@ img {
     background-repeat: no-repeat;
   }
 }
+@media (min-width:1600px){
+  .about-tech{
+    background-size: 100%, 170rem;
+  }
+}
 
 .about-tech-grid {
   display: grid;
@@ -220,5 +225,53 @@ img {
   }
   .text-about-tech p {
     text-align: justify;
+  }
+}
+
+/*ELIGE*/
+.modelo{
+  background-color: var(--lightGray);
+  display: flex;
+  color: var(--primaryColor);
+  border-radius: 3rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem  1rem;
+  margin-bottom: var(--space);
+}
+.modelo img {
+  width: 100%
+}
+.modelo:last-child{
+  background-color: #25508F;
+  color: var(--white);
+}
+
+.model__text p{
+ font-size: 3rem;
+ font-weight: 900;
+}
+
+@media (min-width: 768px){
+  .choice-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+   
+    gap: 5rem;
+  }
+  .modelo{
+    margin-bottom: 0;
+    padding: 5rem;
+  }
+  .modelo:nth-child(1){
+    grid-column: .5/2;
+  }
+  .modelo:nth-child(2){
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .modelo:nth-child(3){
+    grid-column: 2/3;
+    
   }
 }
